@@ -1,6 +1,6 @@
 REPORT zag_test_pushbuttom.
 
-TYPES: ty_screen_field TYPE c LENGTH 83.
+*TYPES: ty_screen_field TYPE c LENGTH 83.
 
 SELECTION-SCREEN:
   BEGIN OF BLOCK b1 WITH FRAME,
@@ -9,8 +9,10 @@ SELECTION-SCREEN:
 
 INITIALIZATION.
 
-  PERFORM init CHANGING b_docu.
+  b_docu = 'Show Docs'.
 
-FORM init CHANGING c_field TYPE ty_screen_field.
-  c_field = 'Show Docs'.
-ENDFORM.
+*  PERFORM init CHANGING b_docu.
+*
+*FORM init CHANGING c_field TYPE ty_screen_field.
+*  c_field = 'Show Docs'.
+*ENDFORM.
